@@ -1,0 +1,64 @@
+[
+    {
+        "laptop": [
+            {
+                "name": "Macbook",
+                "image": "macbook.png",
+                "price": 899.99,
+                "description": "Apple laptop"
+            },
+            {
+                "name": "Surface",
+                "image": "surface.png",
+                "price": 899.99,
+                "description": "Microsoft laptop"
+            },
+            {
+                "name": "Spectre",
+                "image": "spectre.png",
+                "price": 1299.99,
+                "description": "HP laptop"
+            }
+        ],
+        "mobile": [
+            {
+                "name": "iPhone",
+                "image": "iphone.png",
+                "price": 799.99,
+                "description": "Apple smartphone"
+            },
+            {
+                "name": "Galaxy",
+                "image": "galaxy.png",
+                "price": 799.99,
+                "description": "Samsung smartphone"
+            },
+            {
+                "name": "Pixel",
+                "image": "pixel.png",
+                "price": 799.99,
+                "description": "Google smartphone"
+            }
+        ],
+        "gaming": [
+            {
+                "name": "Playstation",
+                "image": "playstation.png",
+                "price": 799.99,
+                "description": "Sony gaming console"
+            },
+            {
+                "name": "Xbox",
+                "image": "xbox.png",
+                "price": 799.99,
+                "description": "Microsoft gaming console"
+            },
+            {
+                "name": "Switch",
+                "image": "switch.png",
+                "price": 799.99,
+                "description": "Nintendo gaming console"
+            }
+        ]
+    }
+]

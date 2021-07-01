@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './app.css';
+
+/*Import Components*/
+import Land from './Components/Land';
+import ItemGrid from './Components/ItemGrid';
 
 function App() {
+
+  const [displayItems, setDisplayItems] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Land 
+        displayItems = {displayItems}
+        setDisplayItems = {setDisplayItems}
+      />
+      <h1>Item Category</h1>
+      <ItemGrid />
     </div>
   );
 }

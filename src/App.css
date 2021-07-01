@@ -1,38 +1,94 @@
-.App {
+/*Mixins*/
+/*App Styles*/
+* {
+  font-family: "Rubik", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Component Styles*/
+.Land h1 {
+  font-size: 20em;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Land h2 {
+  font-size: 10em;
+  margin: 0;
+}
+
+.Land button {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: none;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+  border: none;
+  font-size: 5em;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.5em;
+}
+
+.Land button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.ItemGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.Item {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: none;
+  display: block;
+  margin: auto auto;
+  width: 60%;
+}
+
+.Item img {
+  width: 50%;
+}
+
+.Item button {
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+  background: #00ff53;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ff53), to(#00ffb1));
+  background: linear-gradient(180deg, #00ff53 0%, #00ffb1 100%);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
   color: white;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.Item button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=app.css.map */
