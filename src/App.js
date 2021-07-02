@@ -7,7 +7,7 @@ import ItemGrid from './Components/ItemGrid';
 
 function App() {
 
-  const [displayItems, setDisplayItems] = useState("");
+  const [displayItems, setDisplayItems] = useState("null");
 
   return (
     <div className="App">
@@ -16,7 +16,9 @@ function App() {
         setDisplayItems = {setDisplayItems}
       />
       <h1>Item Category</h1>
-      <ItemGrid />
+      <ItemGrid 
+        displayItems = {displayItems}
+      />
     </div>
   );
 }
