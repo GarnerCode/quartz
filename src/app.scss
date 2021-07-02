@@ -20,6 +20,7 @@
   font-family: "Rubik", sans-serif;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -57,8 +58,10 @@
   display: block;
   margin: auto auto;
   width: 60%;
+  height: 23em;
   img {
-    width: 50%;
+    width: 65%;
+    height: 50%;
   }
   button {
     @include btnHover();

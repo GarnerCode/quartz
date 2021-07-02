@@ -38,7 +38,7 @@ export default function ItemGrid({displayItems}) {
 
     
     return (
-        <div className="ItemGrid">
+        <div id="ItemGrid" className="ItemGrid">
             {category}
         </div>
     )
