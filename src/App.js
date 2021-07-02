@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './app.css';
+import './App.css';
 
 /*Import Components*/
 import Land from './Components/Land';
