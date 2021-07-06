@@ -2,17 +2,22 @@ import React from 'react';
 import Item from './Item';
 import Data from '../itemsList.json';
 
-export default function ItemGrid({displayItems}) {
+export default function ItemGrid({displayItems, cartArray, priceTotal}) {
 
     let category;
     switch(displayItems) {
-        case "Laptop":
+        default:
+            break;
+        case "Laptops":
             category = Data[0].laptop.map(item => <Item 
             key = {item.name}
             name = {item.name}
             image = {item.image}
             price = {item.price}
-            desc = {item.description} />
+            desc = {item.description} 
+            cartArray = {cartArray}
+            priceTotal = {priceTotal}
+            />
             );
             break;
         case "Mobile":
@@ -21,7 +26,10 @@ export default function ItemGrid({displayItems}) {
             name = {item.name}
             image = {item.image}
             price = {item.price}
-            desc = {item.description} />
+            desc = {item.description} 
+            cartArray = {cartArray}
+            priceTotal = {priceTotal}
+            />
             );
             break;
         case "Gaming":
@@ -30,7 +38,10 @@ export default function ItemGrid({displayItems}) {
             name = {item.name}
             image = {item.image}
             price = {item.price}
-            desc = {item.description} />
+            desc = {item.description} 
+            cartArray = {cartArray}
+            priceTotal = {priceTotal}
+            />
             );
             break;
     

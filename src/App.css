@@ -11,6 +11,78 @@
   height: 100vh;
 }
 
+.App .btn-cart {
+  background: #00ff53;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ff53), to(#00ffb1));
+  background: linear-gradient(180deg, #00ff53 0%, #00ffb1 100%);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  padding: 0.5em;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-size: 2.5em;
+  z-index: 5;
+}
+
+.App .btn-cart:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.App footer {
+  margin-top: 20em;
+}
+
+.Cart {
+  display: none;
+  background: #00ff53;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ff53), to(#00ffb1));
+  background: linear-gradient(180deg, #00ff53 0%, #00ffb1 100%);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  padding: 0.5em;
+  position: fixed;
+  width: 30%;
+  bottom: 1em;
+  right: 1em;
+  z-index: 6;
+}
+
+.Cart button {
+  background: #00ff53;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00ff53), to(#00ffb1));
+  background: linear-gradient(180deg, #00ff53 0%, #00ffb1 100%);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  padding: 0.5em;
+  background: #00ff53;
+  background: linear-gradient(180deg, #00ff53 0%, #00ffb1 100%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  padding: 0.5em;
+  z-index: 7;
+}
+
 /*Component Styles*/
 .Land h1 {
   font-size: 20em;
@@ -61,22 +133,24 @@
   -webkit-backdrop-filter: blur(5px);
   border-radius: 10px;
   border: none;
-  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   margin: auto auto;
+  margin-top: 2em;
   width: 60%;
-  height: 23em;
+  height: 25em;
 }
 
 .Item img {
-  width: 65%;
-  height: 50%;
+  /*Img Dimensions: 800x800*/
+  width: 50%;
+  display: block;
+  margin: auto auto;
 }
 
 .Item button {
-  -webkit-transition: -webkit-transform ease-in-out 0.2s;
-  transition: -webkit-transform ease-in-out 0.2s;
-  transition: transform ease-in-out 0.2s;
-  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
   background: #00ff53;
   background: -webkit-gradient(linear, left top, left bottom, from(#00ff53), to(#00ffb1));
   background: linear-gradient(180deg, #00ff53 0%, #00ffb1 100%);
@@ -87,7 +161,10 @@
   font-size: 1.5em;
   color: white;
   padding: 0.5em;
-  margin-bottom: 0.5em;
+  -webkit-transition: -webkit-transform ease-in-out 0.2s;
+  transition: -webkit-transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, -webkit-transform ease-in-out 0.2s;
 }
 
 .Item button:hover {

@@ -2,42 +2,78 @@
     {
         "laptop": [
             {
-                "name": "Macbook",
+                "name": "Apple Macbook",
                 "image": "macbook.png",
-                "price": 899.99,
+                "price": 1299.99,
                 "description": "Apple laptop"
             },
             {
-                "name": "Surface",
+                "name": "Microsoft Surface",
                 "image": "surface.png",
-                "price": 899.99,
+                "price": 1299.99,
                 "description": "Microsoft laptop"
             },
             {
-                "name": "Spectre",
+                "name": "Google Pixelbook",
+                "image": "pixelbook.png",
+                "price": 999.99,
+                "description": "Google laptop"
+            },
+            {
+                "name": "HP Spectre",
                 "image": "spectre.png",
                 "price": 1299.99,
                 "description": "HP laptop"
+            },
+            {
+                "name": "Asus Vivobook",
+                "image": "vivobook.png",
+                "price": 799.99,
+                "description": "Asus laptop"
+            },
+            {
+                "name": "Dell XPS15",
+                "image": "xps15.png",
+                "price": 1299.99,
+                "description": "Dell laptop"
+            },
+            {
+                "name": "Lenovo IdeaPad",
+                "image": "ideapad.png",
+                "price": 799.99,
+                "description": "Lenovo laptop"
+            },
+            {
+                "name": "Acer Aspire",
+                "image": "aspire.png",
+                "price": 699.99,
+                "description": "Acer laptop"
             }
         ],
         "mobile": [
             {
-                "name": "iPhone",
+                "name": "Apple iPhone",
                 "image": "iphone.png",
                 "price": 799.99,
                 "description": "Apple smartphone"
             },
             {
-                "name": "Galaxy",
+                "name": "Samsung Galaxy",
                 "image": "galaxy.png",
                 "price": 799.99,
                 "description": "Samsung smartphone"
             },
             {
-                "name": "Pixel",
+                "name": "Google Pixel",
                 "image": "pixel.png",
                 "price": 799.99,
                 "description": "Google smartphone"
+            },
+            {
+                "name": "Motorola Razr",
+                "image": "razr.png",
+                "price": 799.99,
+                "description": "Motorola smartphone"
             }
         ],
         "gaming": [

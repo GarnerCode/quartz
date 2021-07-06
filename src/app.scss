@@ -8,6 +8,21 @@
   border: none;
 }
 
+@mixin btnStyles {
+  background: rgb(0, 255, 83);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 83, 1) 0%,
+    rgba(0, 255, 177, 1) 100%
+  );
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+  padding: 0.5em;
+}
+
 @mixin btnHover {
   transition: transform ease-in-out 0.2s;
   &:hover {
@@ -25,6 +40,33 @@
 
 .App {
   height: 100vh;
+  .btn-cart {
+    @include btnStyles();
+    @include btnHover();
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: 2.5em;
+    z-index: 5;
+  }
+  footer {
+    margin-top: 20em;
+  }
+}
+
+.Cart {
+  display: none;
+  @include btnStyles();
+  position: fixed;
+  width: 30%;
+  bottom: 1em;
+  right: 1em;
+  z-index: 6;
+  button {
+    @include btnStyles();
+    @include btnStyles();
+    z-index: 7;
+  }
 }
 
 /*Component Styles*/
@@ -55,28 +97,20 @@
 
 .Item {
   @include glass();
-  display: block;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   margin: auto auto;
+  margin-top: 2em;
   width: 60%;
-  height: 23em;
+  height: 25em;
   img {
-    width: 65%;
-    height: 50%;
+    /*Img Dimensions: 800x800*/
+    width: 50%;
+    display: block;
+    margin: auto auto;
   }
   button {
+    @include btnStyles();
     @include btnHover();
-    background: rgb(0, 255, 83);
-    background: linear-gradient(
-      180deg,
-      rgba(0, 255, 83, 1) 0%,
-      rgba(0, 255, 177, 1) 100%
-    );
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5em;
-    color: white;
-    padding: 0.5em;
-    margin-bottom: 0.5em;
   }
 }

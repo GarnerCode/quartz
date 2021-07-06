@@ -3,7 +3,7 @@ import React from 'react'
 export default function Land({setDisplayItems}) {
 
     const clickLaptop = () => {
-        setDisplayItems("Laptop");
+        setDisplayItems("Laptops");
     }
     const clickMobile = () => {
         setDisplayItems("Mobile");
