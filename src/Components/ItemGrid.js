@@ -2,7 +2,12 @@ import React from 'react';
 import Item from './Item';
 import Data from '../itemsList.json';
 
-export default function ItemGrid({displayItems, cartArray, priceTotal}) {
+export default function ItemGrid({displayItems, cartState, setCartState, priceTotal, setPriceTotal}) {
+
+    const handleAddToCart = (name, price) => {
+        setCartState([...cartState, name]);
+        setPriceTotal(priceTotal + price);
+}
 
     let category;
     switch(displayItems) {
@@ -14,9 +19,12 @@ export default function ItemGrid({displayItems, cartArray, priceTotal}) {
             name = {item.name}
             image = {item.image}
             price = {item.price}
-            desc = {item.description} 
-            cartArray = {cartArray}
+            desc = {item.description}
+            cartState = {cartState}
+            setCartState = {setCartState}
             priceTotal = {priceTotal}
+            setPriceTotal = {setPriceTotal}
+            handleAddToCart = {handleAddToCart}
             />
             );
             break;
@@ -26,9 +34,12 @@ export default function ItemGrid({displayItems, cartArray, priceTotal}) {
             name = {item.name}
             image = {item.image}
             price = {item.price}
-            desc = {item.description} 
-            cartArray = {cartArray}
+            desc = {item.description}
+            cartState = {cartState} 
+            setCartState = {setCartState}
             priceTotal = {priceTotal}
+            setPriceTotal = {setPriceTotal}
+            handleAddToCart = {handleAddToCart}
             />
             );
             break;
@@ -38,15 +49,16 @@ export default function ItemGrid({displayItems, cartArray, priceTotal}) {
             name = {item.name}
             image = {item.image}
             price = {item.price}
-            desc = {item.description} 
-            cartArray = {cartArray}
+            desc = {item.description}
+            cartState = {cartState} 
+            setCartState = {setCartState}
             priceTotal = {priceTotal}
+            setPriceTotal = {setPriceTotal}
+            handleAddToCart = {handleAddToCart}
             />
             );
             break;
-    
     }
-
     
     return (
         <div id="ItemGrid" className="ItemGrid">

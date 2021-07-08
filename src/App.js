@@ -9,13 +9,23 @@ import Cart from './Components/Cart';
 function App() {
 
   const [displayItems, setDisplayItems] = useState("");
-  const cartArray = [];
-  var priceTotal = 0;
+  const [displayCart, setDisplayCart] = useState(false);
+  const [cartState, setCartState] = useState([]);
+  const [priceTotal, setPriceTotal] = useState(0);
+
+  const handleCartBtn = () => {
+    setDisplayCart(true);
+  }
+
 
   return (
     <div className="App">
-    <button className="btn-cart"><i className="fas fa-shopping-cart"></i></button>
-    <Cart />
+      <Cart 
+        handleCartBtn = {handleCartBtn}
+        displayCart = {displayCart}
+        cartState = {cartState}
+        priceTotal = {priceTotal}
+      />
       <Land 
         displayItems = {displayItems}
         setDisplayItems = {setDisplayItems}
@@ -23,8 +33,10 @@ function App() {
       <h1>{displayItems}</h1>
       <ItemGrid 
         displayItems = {displayItems}
-        cartArray = {cartArray}
+        cartState = {cartState}
+        setCartState = {setCartState}
         priceTotal = {priceTotal}
+        setPriceTotal = {setPriceTotal}
       />
       <footer>
         <h1>Check out my other projects at <a href="https://tyler-garner.com" target="_blank">www.tyler-garner.com</a></h1>
