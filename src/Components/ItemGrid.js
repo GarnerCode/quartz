@@ -2,12 +2,7 @@ import React from 'react';
 import Item from './Item';
 import Data from '../itemsList.json';
 
-export default function ItemGrid({displayItems, cartState, setCartState, priceTotal, setPriceTotal}) {
-
-    const handleAddToCart = (name, price) => {
-        setCartState([...cartState, name]);
-        setPriceTotal(priceTotal + price);
-}
+export default function ItemGrid({displayItems, cartState, setCartState, priceTotal, setPriceTotal, handleAddToCart}) {
 
     let category;
     switch(displayItems) {

@@ -11,11 +11,18 @@ function App() {
   const [displayItems, setDisplayItems] = useState("");
   const [displayCart, setDisplayCart] = useState(false);
   const [cartState, setCartState] = useState([]);
+  const [cartImgState, setCartImgState] = useState([]);
   const [priceTotal, setPriceTotal] = useState(0);
 
   const handleCartBtn = () => {
     setDisplayCart(true);
   }
+
+  const handleAddToCart = (name, price, image) => {
+    setCartState([...cartState, name]);
+    setCartImgState([...cartImgState, image]);
+    setPriceTotal(priceTotal + price);
+}
 
 
   return (
@@ -24,6 +31,7 @@ function App() {
         handleCartBtn = {handleCartBtn}
         displayCart = {displayCart}
         cartState = {cartState}
+        cartImgState = {cartImgState}
         priceTotal = {priceTotal}
       />
       <Land 
@@ -37,6 +45,7 @@ function App() {
         setCartState = {setCartState}
         priceTotal = {priceTotal}
         setPriceTotal = {setPriceTotal}
+        handleAddToCart = {handleAddToCart}
       />
       <footer>
         <h1>Check out my other projects at <a href="https://tyler-garner.com" target="_blank">www.tyler-garner.com</a></h1>

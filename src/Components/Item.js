@@ -4,6 +4,7 @@ export default function Item({name, image, price, desc, handleAddToCart}) {
 
     const itemName = name;
     const itemPrice = price;
+    const itemImage = image;
     
     return (
         <div className="Item">
@@ -11,7 +12,7 @@ export default function Item({name, image, price, desc, handleAddToCart}) {
             <img src={`./media/${image}`} alt="" />
             <p className="price">${price}</p>
             <p className="desc">{desc}</p>
-            <button onClick={() => handleAddToCart(itemName, itemPrice)}>ADD TO CART</button>
+            <button onClick={() => handleAddToCart(itemName, itemPrice, itemImage)}>ADD TO CART</button>
         </div>
     )
 }
