@@ -5,7 +5,6 @@ import './App.css';
 import Land from './Components/Land';
 import ItemGrid from './Components/ItemGrid';
 import Cart from './Components/Cart';
-import CartItem from './Components/CartItem';
 
 function App() {
 
@@ -17,7 +16,7 @@ function App() {
 
   /*Toggle Cart Window*/
   const handleCartBtn = () => {
-    setDisplayCart(true);
+    setDisplayCart(!displayCart);
   }
 
   /*Called in Item, array mapped in Cart and creates new CartItem*/
@@ -25,6 +24,7 @@ function App() {
     const item = { name, price, image };
     setCartState([...cartState, item]);
     setPriceTotal(priceTotal + price);
+    alert(name + " added to cart.");
 }
 
 

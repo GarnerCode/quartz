@@ -54,38 +54,6 @@
   }
 }
 
-.Cart {
-  @include btnStyles();
-  position: fixed;
-  width: 30%;
-  bottom: 1em;
-  right: 1em;
-  z-index: 6;
-  button {
-    @include btnStyles();
-    @include btnStyles();
-    z-index: 7;
-  }
-}
-
-.cartItem {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  hr {
-    grid-row: 1/2;
-    grid-column: 1/4;
-  }
-  img {
-    width: 50%;
-    display: inline-block;
-    grid-row: 2/3;
-  }
-  p {
-    display: inline-block;
-    grid-row: 2/3;
-  }
-}
-
 /*Component Styles*/
 .Land {
   h1 {
@@ -129,5 +97,56 @@
   button {
     @include btnStyles();
     @include btnHover();
+  }
+}
+
+.Cart {
+  @include btnStyles();
+  position: fixed;
+  width: 30%;
+  bottom: 1em;
+  right: 1em;
+  z-index: 6;
+  max-height: 80%;
+  hr {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  button {
+    background: none;
+    border: none;
+    font-size: 2em;
+    z-index: 7;
+    display: block;
+    &:hover {
+      color: red;
+    }
+  }
+  p {
+    color: white;
+    display: inline-block;
+    margin: 1em;
+  }
+  .cartItemsContainer {
+    overflow-y: auto;
+    height: 10%;
+    .cartItem {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      hr {
+        grid-row: 1/2;
+        grid-column: 1/4;
+        width: 99%;
+      }
+      img {
+        width: 50%;
+        display: inline-block;
+        grid-row: 2/3;
+      }
+      p {
+        display: inline-block;
+        grid-row: 2/3;
+        color: white;
+      }
+    }
   }
 }

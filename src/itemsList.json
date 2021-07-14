@@ -78,19 +78,19 @@
         ],
         "gaming": [
             {
-                "name": "Playstation",
+                "name": "Sony Playstation",
                 "image": "playstation.png",
                 "price": 799.99,
                 "description": "Sony gaming console"
             },
             {
-                "name": "Xbox",
+                "name": "Microsoft Xbox",
                 "image": "xbox.png",
                 "price": 799.99,
                 "description": "Microsoft gaming console"
             },
             {
-                "name": "Switch",
+                "name": "Nintendo Switch",
                 "image": "switch.png",
                 "price": 799.99,
                 "description": "Nintendo gaming console"
