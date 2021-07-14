@@ -5,22 +5,25 @@ import './App.css';
 import Land from './Components/Land';
 import ItemGrid from './Components/ItemGrid';
 import Cart from './Components/Cart';
+import CartItem from './Components/CartItem';
 
 function App() {
 
+  /*State variables*/
   const [displayItems, setDisplayItems] = useState("");
   const [displayCart, setDisplayCart] = useState(false);
   const [cartState, setCartState] = useState([]);
-  const [cartImgState, setCartImgState] = useState([]);
   const [priceTotal, setPriceTotal] = useState(0);
 
+  /*Toggle Cart Window*/
   const handleCartBtn = () => {
     setDisplayCart(true);
   }
 
+  /*Called in Item, array mapped in Cart and creates new CartItem*/
   const handleAddToCart = (name, price, image) => {
-    setCartState([...cartState, name]);
-    setCartImgState([...cartImgState, image]);
+    const item = { name, price, image };
+    setCartState([...cartState, item]);
     setPriceTotal(priceTotal + price);
 }
 
@@ -31,7 +34,6 @@ function App() {
         handleCartBtn = {handleCartBtn}
         displayCart = {displayCart}
         cartState = {cartState}
-        cartImgState = {cartImgState}
         priceTotal = {priceTotal}
       />
       <Land 
@@ -48,7 +50,7 @@ function App() {
         handleAddToCart = {handleAddToCart}
       />
       <footer>
-        <h1>Check out my other projects at <a href="https://tyler-garner.com" target="_blank">www.tyler-garner.com</a></h1>
+        <h1>Check out my other projects at <a href="https://tyler-garner.com" target="_blank" rel="noreferrer">www.tyler-garner.com</a></h1>
       </footer>
     </div>
   );

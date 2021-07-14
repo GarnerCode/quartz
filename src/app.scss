@@ -68,6 +68,24 @@
   }
 }
 
+.cartItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  hr {
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }
+  img {
+    width: 50%;
+    display: inline-block;
+    grid-row: 2/3;
+  }
+  p {
+    display: inline-block;
+    grid-row: 2/3;
+  }
+}
+
 /*Component Styles*/
 .Land {
   h1 {

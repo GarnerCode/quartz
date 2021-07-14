@@ -1,16 +1,13 @@
 import React from 'react';
 import CartItem from './CartItem';
 
-export default function Cart({handleCartBtn, displayCart, cartState, cartImgState, priceTotal}) {
+export default function Cart({handleCartBtn, displayCart, cartState, priceTotal}) {
 
     const itemList = cartState.map(item => <CartItem 
-        key = {item}
-        name = {item}
-        />
-    );
-    const imageList = cartImgState.map(item => <CartItem 
-        key= {item}
-        image ={item}
+        key = {item.name}
+        name = {item.name}
+        image = {item.image}
+        price = {item.price}
         />
     );
 
@@ -19,7 +16,6 @@ export default function Cart({handleCartBtn, displayCart, cartState, cartImgStat
         return (
             <div className="Cart">
             <button><i className="fas fa-times"></i></button>
-            {imageList}
             {itemList}
             <hr />
             <p>Item Count: {cartState.length}</p>

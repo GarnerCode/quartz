@@ -82,6 +82,37 @@
   z-index: 7;
 }
 
+.cartItem {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cartItem hr {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.cartItem img {
+  width: 50%;
+  display: inline-block;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.cartItem p {
+  display: inline-block;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
 /*Component Styles*/
 .Land h1 {
   font-size: 20em;
@@ -170,4 +201,4 @@
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */
