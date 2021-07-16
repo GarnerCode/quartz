@@ -5,6 +5,8 @@ import './App.css';
 import Land from './Components/Land';
 import ItemGrid from './Components/ItemGrid';
 import Cart from './Components/Cart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -13,6 +15,10 @@ function App() {
   const [displayCart, setDisplayCart] = useState(false);
   const [cartState, setCartState] = useState([]);
   const [priceTotal, setPriceTotal] = useState(0);
+
+  /*Notification*/
+  const notifyAdd = (name) => toast(name + ' added to cart');
+  const notifyRemove = (name) => toast(name + ' removed from cart');
 
   /*Toggle Cart Window*/
   const handleCartBtn = () => {
@@ -24,17 +30,21 @@ function App() {
     const item = { name, price, image };
     setCartState([...cartState, item]);
     setPriceTotal(priceTotal + price);
-    alert(name + " added to cart.");
+    notifyAdd(name);
 }
 
 
   return (
     <div className="App">
+    <ToastContainer />
       <Cart 
         handleCartBtn = {handleCartBtn}
         displayCart = {displayCart}
         cartState = {cartState}
+        setCartState = {setCartState}
         priceTotal = {priceTotal}
+        setPriceTotal = {setPriceTotal}
+        notifyRemove = {notifyRemove}
       />
       <Land 
         displayItems = {displayItems}

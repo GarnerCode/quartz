@@ -72,7 +72,7 @@
             {
                 "name": "Motorola Razr",
                 "image": "razr.png",
-                "price": 799.99,
+                "price": 1499.99,
                 "description": "Motorola smartphone"
             }
         ],
@@ -80,19 +80,19 @@
             {
                 "name": "Sony Playstation",
                 "image": "playstation.png",
-                "price": 799.99,
+                "price": 499.99,
                 "description": "Sony gaming console"
             },
             {
                 "name": "Microsoft Xbox",
                 "image": "xbox.png",
-                "price": 799.99,
+                "price": 499.99,
                 "description": "Microsoft gaming console"
             },
             {
                 "name": "Nintendo Switch",
                 "image": "switch.png",
-                "price": 799.99,
+                "price": 299.99,
                 "description": "Nintendo gaming console"
             }
         ]

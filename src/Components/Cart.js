@@ -1,13 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import CartItem from './CartItem';
 
-export default function Cart({handleCartBtn, displayCart, cartState, priceTotal}) {
+export default function Cart({handleCartBtn, displayCart, cartState, setCartState, priceTotal, setPriceTotal, notifyRemove}) {
+
+    let cartIsEmpty;
+    if (cartState.length >= 1) {
+        cartIsEmpty = false;
+    } else {
+        cartIsEmpty = true;
+    }
 
     const itemList = cartState.map(item => <CartItem 
         key = {item.name}
         name = {item.name}
         image = {item.image}
         price = {item.price}
+        cartState = {cartState}
+        setCartState = {setCartState}
+        priceTotal = {priceTotal}
+        setPriceTotal = {setPriceTotal}
+        notifyRemove = {notifyRemove}
         />
     );
 
@@ -15,9 +27,9 @@ export default function Cart({handleCartBtn, displayCart, cartState, priceTotal}
     if (displayCart) {
         return (
             <div className="Cart">
-            <button onClick={() => handleCartBtn()}><i className="fas fa-times"></i></button>
+            <button className="btn-x" onClick={() => handleCartBtn()}><i className="fas fa-times"></i></button>
             <div className="cartItemsContainer">
-                {itemList}
+                {cartIsEmpty ? 'Your cart is empty' : itemList}
             </div>
             <hr />
             <p>Item Count: {cartState.length}</p>
