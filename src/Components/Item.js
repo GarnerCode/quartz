@@ -1,8 +1,10 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Item({name, image, price, desc, handleAddToCart}) {
 
     const itemName = name;
+    const itemId = uuidv4();
     const itemPrice = price;
     const itemImage = image;
     
@@ -12,7 +14,7 @@ export default function Item({name, image, price, desc, handleAddToCart}) {
             <img src={`./media/${image}`} alt="" />
             <p className="price">${price}</p>
             <p className="desc">{desc}</p>
-            <button onClick={() => handleAddToCart(itemName, itemPrice, itemImage)}>ADD TO CART</button>
+            <button onClick={() => handleAddToCart(itemName, itemId, itemPrice, itemImage)}>ADD TO CART</button>
         </div>
     )
 }

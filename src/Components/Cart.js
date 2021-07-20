@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import CartItem from './CartItem';
 
 export default function Cart({handleCartBtn, displayCart, cartState, setCartState, priceTotal, setPriceTotal, notifyRemove}) {
@@ -10,8 +10,10 @@ export default function Cart({handleCartBtn, displayCart, cartState, setCartStat
         cartIsEmpty = true;
     }
 
+    /*!!!Duplicate items in cart are all deleted if one is deleted from cart!!!*/
     const itemList = cartState.map(item => <CartItem 
-        key = {item.name}
+        key = {item.id}
+        id = {item.id}
         name = {item.name}
         image = {item.image}
         price = {item.price}
@@ -37,6 +39,7 @@ export default function Cart({handleCartBtn, displayCart, cartState, setCartStat
         </div>
         )
     }
+    
     return (
         <button className="btn-cart" onClick={() => handleCartBtn()}><i className="fas fa-shopping-cart"></i> {cartState.length}</button>
     )

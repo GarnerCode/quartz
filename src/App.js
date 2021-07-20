@@ -26,8 +26,8 @@ function App() {
   }
 
   /*Called in Item, array mapped in Cart and creates new CartItem*/
-  const handleAddToCart = (name, price, image) => {
-    const item = { name, price, image };
+  const handleAddToCart = (name, id, price, image) => {
+    const item = { name, id, price, image };
     setCartState([...cartState, item]);
     setPriceTotal(priceTotal + price);
     notifyAdd(name);

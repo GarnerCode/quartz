@@ -1,6 +1,7 @@
 import React from 'react';
 import Item from './Item';
 import Data from '../itemsList.json';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function ItemGrid({displayItems, cartState, setCartState, priceTotal, setPriceTotal, handleAddToCart}) {
 
@@ -10,7 +11,7 @@ export default function ItemGrid({displayItems, cartState, setCartState, priceTo
             break;
         case "Laptops":
             category = Data[0].laptop.map(item => <Item 
-            key = {item.name}
+            key = {uuidv4()}
             name = {item.name}
             image = {item.image}
             price = {item.price}
@@ -25,7 +26,7 @@ export default function ItemGrid({displayItems, cartState, setCartState, priceTo
             break;
         case "Mobile":
             category = Data[0].mobile.map(item => <Item 
-            key = {item.name}
+            key = {uuidv4()}
             name = {item.name}
             image = {item.image}
             price = {item.price}
@@ -40,7 +41,7 @@ export default function ItemGrid({displayItems, cartState, setCartState, priceTo
             break;
         case "Gaming":
             category = Data[0].gaming.map(item => <Item 
-            key = {item.name}
+            key = {uuidv4()}
             name = {item.name}
             image = {item.image}
             price = {item.price}

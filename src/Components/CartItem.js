@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function CartItem({name, image, price, cartState, setCartState, priceTotal, setPriceTotal, notifyRemove}) {
+export default function CartItem({id, name, image, price, cartState, setCartState, priceTotal, setPriceTotal, notifyRemove}) {
 
     const deleteItemHandler = () => {
-        const deletedItem = cartState.filter(item => item.name !== name);
-        setCartState(deletedItem);
+        setCartState(cartState.filter((el) => el.id !== id));
+        console.log(id);
         setPriceTotal(priceTotal - price);
         notifyRemove(name);
     }
@@ -15,7 +15,7 @@ export default function CartItem({name, image, price, cartState, setCartState, p
             <img src={`./media/${image}`} alt="" />
             <p>{name}</p>
             <p>{price}</p>
-            <button className="btn-x" onClick={() => deleteItemHandler()}><i class="fas fa-times"></i></button>
+            <button className="btn-x" onClick={() => deleteItemHandler()}><i className="fas fa-times"></i></button>
         </div>
     )
 }

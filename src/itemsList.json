@@ -3,48 +3,56 @@
         "laptop": [
             {
                 "name": "Apple Macbook",
+                "id": 223642,
                 "image": "macbook.png",
                 "price": 1299.99,
                 "description": "Apple laptop"
             },
             {
                 "name": "Microsoft Surface",
+                "id": 530249,
                 "image": "surface.png",
                 "price": 1299.99,
                 "description": "Microsoft laptop"
             },
             {
                 "name": "Google Pixelbook",
+                "id": 391185,
                 "image": "pixelbook.png",
                 "price": 999.99,
                 "description": "Google laptop"
             },
             {
                 "name": "HP Spectre",
+                "id": 539467,
                 "image": "spectre.png",
                 "price": 1299.99,
                 "description": "HP laptop"
             },
             {
                 "name": "Asus Vivobook",
+                "id": 402653,
                 "image": "vivobook.png",
                 "price": 799.99,
                 "description": "Asus laptop"
             },
             {
                 "name": "Dell XPS15",
+                "id": 808470,
                 "image": "xps15.png",
                 "price": 1299.99,
                 "description": "Dell laptop"
             },
             {
                 "name": "Lenovo IdeaPad",
+                "id": 969000,
                 "image": "ideapad.png",
                 "price": 799.99,
                 "description": "Lenovo laptop"
             },
             {
                 "name": "Acer Aspire",
+                "id": 181748,
                 "image": "aspire.png",
                 "price": 699.99,
                 "description": "Acer laptop"
@@ -53,24 +61,28 @@
         "mobile": [
             {
                 "name": "Apple iPhone",
+                "id": 517781,
                 "image": "iphone.png",
                 "price": 799.99,
                 "description": "Apple smartphone"
             },
             {
                 "name": "Samsung Galaxy",
+                "id": 154973,
                 "image": "galaxy.png",
                 "price": 799.99,
                 "description": "Samsung smartphone"
             },
             {
                 "name": "Google Pixel",
+                "id": 240140,
                 "image": "pixel.png",
                 "price": 799.99,
                 "description": "Google smartphone"
             },
             {
                 "name": "Motorola Razr",
+                "id": 641098,
                 "image": "razr.png",
                 "price": 1499.99,
                 "description": "Motorola smartphone"
@@ -79,18 +91,21 @@
         "gaming": [
             {
                 "name": "Sony Playstation",
+                "id": 864307,
                 "image": "playstation.png",
                 "price": 499.99,
                 "description": "Sony gaming console"
             },
             {
                 "name": "Microsoft Xbox",
+                "id": 847923,
                 "image": "xbox.png",
                 "price": 499.99,
                 "description": "Microsoft gaming console"
             },
             {
                 "name": "Nintendo Switch",
+                "id": 416794,
                 "image": "switch.png",
                 "price": 299.99,
                 "description": "Nintendo gaming console"
