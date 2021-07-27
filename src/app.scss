@@ -247,6 +247,14 @@
 }
 
 @media only screen and (min-width: 1370px) {
+  .App {
+    .btn-cart {
+      font-size: 2em;
+    }
+  }
+  .Cart {
+    width: 30%;
+  }
   .Land {
     h1 {
       font-size: 20em;
