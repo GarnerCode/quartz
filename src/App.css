@@ -47,13 +47,8 @@
 }
 
 /*Component Styles*/
-.Land h1 {
-  font-size: 20em;
-  margin: 0;
-}
-
+.Land h1,
 .Land h2 {
-  font-size: 10em;
   margin: 0;
 }
 
@@ -222,5 +217,93 @@
 .Cart .cartItemsContainer .cartItem button {
   display: inline-block;
   font-size: 1em;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width: 415px) {
+  .App .btn-cart {
+    font-size: 1.5em;
+  }
+  .Land h1 {
+    font-size: 2em;
+  }
+  .Land h2 {
+    font-size: 1em;
+  }
+  .Land button {
+    display: inline;
+    font-size: 2.5em;
+  }
+  .ItemGrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .Item {
+    width: 90%;
+  }
+  .Cart {
+    width: 80%;
+  }
+  .Cart p {
+    font-size: 0.5em;
+  }
+  footer h1 {
+    font-size: 1em;
+  }
+}
+
+/*Tablet Styles*/
+@media only screen and (min-width: 760px) {
+  .App .btn-cart {
+    font-size: 1.5em;
+  }
+  .Land h1 {
+    font-size: 10em;
+  }
+  .Land h2 {
+    font-size: 6em;
+  }
+  .Land button {
+    display: inline;
+    font-size: 5em;
+  }
+  .ItemGrid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .Item {
+    width: 90%;
+  }
+  .Item img {
+    width: 50%;
+  }
+  .Cart {
+    width: 80%;
+  }
+  .Cart p {
+    font-size: 0.5em;
+  }
+  footer h1 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 1370px) {
+  .Land h1 {
+    font-size: 20em;
+  }
+  .Land h2 {
+    font-size: 10em;
+  }
+  .ItemGrid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .Item {
+    width: 80%;
+  }
+  .Item img {
+    width: 30%;
+  }
 }
 /*# sourceMappingURL=App.css.map */
